@@ -1,0 +1,77 @@
+.form {
+  padding: 10px;
+}
+/* inputs */
+
+.input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90px;
+}
+
+.input__label {
+  position: absolute;
+  color: #555; /* Color oscuro para el texto */
+  top: 39%;
+  left: 4rem;
+  transition: all 0.2s ease-in;
+  user-select: none;
+  pointer-events: none;
+}
+
+.input__input-box {
+  border: 1px solid #555; /* Color oscuro para el borde */
+  outline: none;
+  border-radius: 12px;
+  height: 42px;
+  width: 300px;
+  margin: 5px 0;
+  padding: 10px 30px;
+  transition: border-color 0.2s ease-in;
+
+}
+
+.input__input-box:focus {
+  border-color: var(--color-tertiary); 
+}
+
+.input__input-box:focus ~ .input__label {
+  top: 0;
+  left: 0;
+  color: var(--color-tertiary); 
+}
+
+.input__label--date {
+  top: 0;
+  left: 0;
+  color: var(--color-tertiary); 
+}
+
+.input__input-box--medium {
+  height: 5rem;
+  width: 35rem;
+}
+
+.input__input-box--large {
+  height: 7.5rem;
+  width: 35rem;
+}
+
+.input__msg {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 1rem;
+}
+
+.input__msg--error {
+  color: #ff4d4d; /* Color rojo para errores */
+}
+
+.icon {
+  position: absolute;
+  right: 2rem;
+  color: #555; /* Color del ícono */
+}
