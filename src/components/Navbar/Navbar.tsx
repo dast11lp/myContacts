@@ -19,7 +19,7 @@ export const Navbar = () => {
 
     return (
         <div className="navbar">
-            <input className="search" type="text"  placeholder="Buscar Número teléfono o correo" onChange={(e)=> atChange(e.target.value)}/>
+            <input className="search" type="text"  placeholder="Buscar número teléfono o correo" onChange={(e)=> atChange(e.target.value)}/>
             <button className='btn' onClick={AddContact}>Agregar</button>
         </div>
     )

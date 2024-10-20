@@ -29,7 +29,9 @@ export const ContactForm = () => {
 
   const id = object?.id;
 
-  
+  const today = new Date();
+  const minDate = new Date(today.setFullYear(today.getFullYear() - 5)).toISOString().split('T')[0];
+  const maxDate = today.toISOString().split('T')[0];
 
   const { register, handleSubmit, watch, reset, formState: { errors } } = useForm<IformInput>({
     mode: 'onChange',
@@ -68,6 +70,10 @@ export const ContactForm = () => {
     }
   }, [contactToEdit, reset]);
 
+
+
+
+
   return (
     <form className='form' onSubmit={handleSubmit(onSubmit)}>
       <div className="input">
@@ -83,7 +89,12 @@ export const ContactForm = () => {
       </div>
 
       <div className="input">
-        <input {...register("date_of_birth", { required: 'La fecha de nacimiento es requerida' })} className="input__input-box" type='date' />
+        <input {...register("date_of_birth", {
+          required: 'La fecha de nacimiento es requerida', validate: {
+            minDate: value => value <= minDate || "La persona debe tener al menos 5 años",
+            maxDate: value => value <= maxDate || "La fecha no puede ser futura"
+          }
+        })} className="input__input-box" type='date' />
         <label className="input__label input__label--date">Fecha de nacimiento</label>
         <span className="input__msg input__msg--error">{errors.date_of_birth?.message}</span>
       </div>

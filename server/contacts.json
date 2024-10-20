@@ -1,50 +1,42 @@
 [
-  {
-    "id": 1,
-    "name": "John Doe",
-    "phone": "3012345678",
-    "date_of_birth": "1990-01-01",
-    "address": "Calle 1 #23-45",
-    "email": "johndoe@mail.com"
-  },
-  {
-    "id": 3,
-    "name": "Alice Johnson",
-    "phone": "3034567890",
-    "date_of_birth": "1992-03-10",
-    "address": "Avenida 3 #45-67",
-    "email": "alicejohnson@correo.com"
-  },
-  {
-    "id": 5,
-    "name": "Charlie Davis",
-    "phone": "3056789012",
-    "date_of_birth": "1995-05-30",
-    "address": "Carrera 5 #67-89",
-    "email": "charliedavis@example.com"
-  },
-  {
-    "id": 6,
-    "name": "Pablo",
-    "phone": "3014794421",
-    "date_of_birth": "2024-10-06",
-    "address": "calle 45",
-    "email": "correo@maial.com"
-  },
-  {
-    "id": 7,
-    "name": "daniel",
-    "phone": "3014794421",
-    "date_of_birth": "2024-10-09",
-    "address": "calle 40",
-    "email": "correo@maial.com"
-  },
-  {
-    "id": 9,
-    "name": "daniel",
-    "phone": "3014794421",
-    "date_of_birth": "2011-01-03",
-    "address": "calle444",
-    "email": "correo@maial.com"
-  }
-]
+    {
+      "id": 1,
+      "name": "John Doe",
+      "phone": "3012345678",
+      "date_of_birth": "1990-01-01",
+      "address": "Calle 1 #23-45",
+      "email": "johndoe@mail.com"
+    },
+    {
+      "id": 3,
+      "name": "Alice Johnson",
+      "phone": "3034567890",
+      "date_of_birth": "1992-03-10",
+      "address": "Avenida 3 #45-67",
+      "email": "alicejohnson@correo.com"
+    },
+    {
+      "id": 4,
+      "name": "Bob Brown",
+      "phone": "3045678901",
+      "date_of_birth": "1988-04-25",
+      "address": "Calle 4 #56-78",
+      "email": "bobbrown@correo.com"
+    },
+    {
+      "id": 5,
+      "name": "Charlie Davis",
+      "phone": "3056789012",
+      "date_of_birth": "1995-05-30",
+      "address": "Carrera 5 #67-89",
+      "email": "charliedavis@example.com"
+    },
+    {
+      "id": 6,
+      "name": "Pedro",
+      "phone": "3014794421",
+      "date_of_birth": "2024-10-06",
+      "address": "calle",
+      "email": "correo@maial.com"
+    }
+  ]
