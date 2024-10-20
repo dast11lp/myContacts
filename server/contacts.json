@@ -1,8 +1,21 @@
 [
   {
+    "id": 1,
+    "name": "John Doe",
+    "phone": "3012345678",
+    "date_of_birth": "1990-01-01",
+    "address": {
+      "street": "Calle 1 #23-45",
+      "city": "Bogotá",
+      "department": "Cundinamarca",
+      "zip_code": "110111"
+    },
+    "email": "johndoe@mail.com"
+  },
+  {
     "id": 2,
     "name": "Jane Smith",
-    "phone": "302 345 6789",
+    "phone": "3023456789",
     "date_of_birth": "1985-02-14",
     "address": {
       "street": "Carrera 2 #34-56",
@@ -10,12 +23,12 @@
       "department": "Antioquia",
       "zip_code": "050001"
     },
-    "email": "janesmith@example.com"
+    "email": "janesmith@mail.com"
   },
   {
     "id": 3,
     "name": "Alice Johnson",
-    "phone": "303 456 7890",
+    "phone": "3034567890",
     "date_of_birth": "1992-03-10",
     "address": {
       "street": "Avenida 3 #45-67",
@@ -23,12 +36,12 @@
       "department": "Valle del Cauca",
       "zip_code": "760001"
     },
-    "email": "alicejohnson@example.com"
+    "email": "alicejohnson@correo.com"
   },
   {
     "id": 4,
     "name": "Bob Brown",
-    "phone": "304 567 8901",
+    "phone": "3045678901",
     "date_of_birth": "1988-04-25",
     "address": {
       "street": "Calle 4 #56-78",
@@ -36,12 +49,12 @@
       "department": "Atlántico",
       "zip_code": "080001"
     },
-    "email": "bobbrown@example.com"
+    "email": "bobbrown@correo.com"
   },
   {
     "id": 5,
     "name": "Charlie Davis",
-    "phone": "305 678 9012",
+    "phone": "3056789012",
     "date_of_birth": "1995-05-30",
     "address": {
       "street": "Carrera 5 #67-89",
@@ -53,8 +66,8 @@
   },
   {
     "id": 6,
-    "name": "Diana Evans",
-    "phone": "306 789 0123",
+    "name": "Diana Evons",
+    "phone": "3067890123",
     "date_of_birth": "1991-06-15",
     "address": {
       "street": "Avenida 6 #78-90",
@@ -66,127 +79,18 @@
   },
   {
     "id": 7,
-    "name": "Ethan Green",
-    "phone": "307 890 1234",
-    "date_of_birth": "1987-07-22",
-    "address": {
-      "street": "Calle 7 #89-01",
-      "city": "Pereira",
-      "department": "Risaralda",
-      "zip_code": "660001"
-    },
-    "email": "ethangreen@example.com"
+    "name": "Daniel",
+    "phone": "3014794421",
+    "date_of_birth": "2024-10-08",
+    "address": "calle 4",
+    "email": "daniel@mail.com"
   },
   {
     "id": 8,
-    "name": "Fiona Hall",
-    "phone": "308 901 2345",
-    "date_of_birth": "1994-08-05",
-    "address": {
-      "street": "Carrera 8 #90-12",
-      "city": "Santa Marta",
-      "department": "Magdalena",
-      "zip_code": "470001"
-    },
-    "email": "fionahall@example.com"
-  },
-  {
-    "id": 9,
-    "name": "George King",
-    "phone": "309 012 3456",
-    "date_of_birth": "1986-09-18",
-    "address": {
-      "street": "Avenida 9 #01-23",
-      "city": "Manizales",
-      "department": "Caldas",
-      "zip_code": "170001"
-    },
-    "email": "georgeking@example.com"
-  },
-  {
-    "id": 10,
-    "name": "Hannah Lee",
-    "phone": "310 123 4567",
-    "date_of_birth": "1993-10-12",
-    "address": {
-      "street": "Calle 10 #12-34",
-      "city": "Cúcuta",
-      "department": "Norte de Santander",
-      "zip_code": "540001"
-    },
-    "email": "hannahlee@example.com"
-  },
-  {
-    "id": 11,
-    "name": "Ian Martin",
-    "phone": "311 234 5678",
-    "date_of_birth": "1992-11-30",
-    "address": {
-      "street": "Carrera 11 #23-45",
-      "city": "Ibagué",
-      "department": "Tolima",
-      "zip_code": "730001"
-    },
-    "email": "ianmartin@example.com"
-  },
-  {
-    "id": 12,
-    "name": "Jack Nelson",
-    "phone": "312 345 6789",
-    "date_of_birth": "1989-12-20",
-    "address": {
-      "street": "Avenida 12 #34-56",
-      "city": "Neiva",
-      "department": "Huila",
-      "zip_code": "410001"
-    },
-    "email": "jacknelson@example.com"
-  },
-  {
-    "id": 13,
-    "name": "Karen Ortiz",
-    "phone": "313 456 7890",
-    "date_of_birth": "1984-01-11",
-    "address": {
-      "street": "Calle 13 #45-67",
-      "city": "Sincelejo",
-      "department": "Sucre",
-      "zip_code": "700001"
-    },
-    "email": "karenortiz@example.com"
-  },
-  {
-    "id": 14,
-    "name": "Leo Parker",
-    "phone": "314 567 8901",
-    "date_of_birth": "1990-02-22",
-    "address": {
-      "street": "Carrera 14 #56-78",
-      "city": "Valledupar",
-      "department": "Cesar",
-      "zip_code": "200001"
-    },
-    "email": "leoparker@example.com"
-  },
-  {
-    "id": 15,
-    "name": "Mia Rivera",
-    "phone": "315 678 9012",
-    "date_of_birth": "1996-03-16",
-    "address": {
-      "street": "Avenida 15 #67-89",
-      "city": "Tunja",
-      "department": "Boyacá",
-      "zip_code": "150001"
-    },
-    "email": "miarivera@example.com"
-  },
-  {
-    "id": 16,
-    "name": "daniel",
+    "name": "Dast",
     "phone": "3014794421",
-    "date_of_birth": "2024-10-20",
-    "address": "calle 4",
-    "email": "daniel@mail.com"
+    "date_of_birth": "2024-10-02",
+    "address": "calle",
+    "email": "correo@maial.com"
   }
 ]

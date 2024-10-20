@@ -22,7 +22,6 @@ export const thunkListContacts = createAsyncThunk(
     '/ contacts',
     async () => {
         const request = await fetchListContacts()
-        console.log(request);
 
         return request;
     }
@@ -52,7 +51,6 @@ export const thunkAddContact = createAsyncThunk(
     '/ contacts',
     async (newContact: Contact) => {
         const request = await addContact(newContact)
-        console.log(request);
 
         return request;
     }

@@ -1,12 +1,11 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import './contact-form.css';
 import { RootState, useAppDispatch } from '../../app/store.ts';
-// import { AddContact, updateSingleContact } from '../../features/getContactsSlice';
+
 import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { thunkAddContact, ThunkUpdateContact } from '../../api/contactsApi.ts';
-// import { thunkAddContact } from '../../api/contact';
-// import { clearSlice } from '../../features/updateContactSlice';
+import { useEffect, useState } from 'react';
+import { thunkAddContact, thunkContactById, thunkListContacts, ThunkUpdateContact } from '../../api/contactsApi.ts';
+
 
 interface IformInput {
   name: string
@@ -27,7 +26,9 @@ export const ContactForm = () => {
 
   const { type } = useSelector((state: RootState) => state.modalReducer.modalData);
   const { object } = useSelector((state: RootState) => state.modalReducer.modalData);
-  // const contactToEdit = useSelector((state: RootState) => state.updateContactReducer.contact);
+  const contactToEdit = useSelector((state: RootState) => state.getSingleContactReducer.contact);
+
+  const [contactToUpdate, setcontactToUpdate] = useState();
 
 
   const id = object?.id;
@@ -35,26 +36,34 @@ export const ContactForm = () => {
   const { register, handleSubmit, watch, reset } = useForm<IformInput>();
 
   const onSubmit: SubmitHandler<IformInput> = (data) => {
-    // dispatch(thunkAddContact(data))
-
-    if (type === 'addContact') dispatch(thunkAddContact(data))
-
-    if (type === 'editContact') {
-      dispatch(ThunkUpdateContact({id, contact: data}))
+    if (type === 'addContact') {
+      dispatch(thunkAddContact(data)).then(() => {
+        dispatch(thunkListContacts());
+      });
     }
 
+    if (type === 'editContact') {
+      dispatch(ThunkUpdateContact({ id, contact: data })).then(() => {
+        dispatch(thunkListContacts());
+      });
+    }
   };
 
-  // useEffect(() => {
-  //   if (contactToEdit && Object.keys(contactToEdit).length > 0) {
-  //     reset(contactToEdit);
-  //   }
 
-  //   return () => {
-  //     reset();
-  //     dispatch(clearSlice())
-  //   }
-  // }, [contactToEdit]);
+  useEffect(() => {
+    if (type === 'editContact' && id) {
+      dispatch(thunkContactById(id));
+    }
+  }, [type, id, dispatch]);
+
+  useEffect(() => {
+    if (contactToEdit) {
+      reset(contactToEdit);
+    }
+  }, [contactToEdit, reset]);
+
+
+
 
 
   return (
@@ -89,7 +98,7 @@ export const ContactForm = () => {
         <span className="input__msg input__msg--error"></span>
       </div>
 
-      <input className='btn' type='submit' />
+      <input className='btn' type='submit' value={'Guardar'} />
     </form>
   )
 }

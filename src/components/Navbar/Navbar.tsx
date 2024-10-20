@@ -1,4 +1,5 @@
 import { useAppDispatch } from "../../app/store"
+import { search } from "../../features/getContactsSlice";
 // import { search } from "../../features/getContactsSlice";
 import { setModal } from "../../features/modalSlice";
 
@@ -13,7 +14,7 @@ export const Navbar = () => {
       }
 
     const atChange= (data: String) => {
-        // dispatch(search(data))
+        dispatch(search(data))
     }
 
     return (

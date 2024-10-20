@@ -15,11 +15,14 @@ export const ContactList = () => {
 
   const dispatch = useAppDispatch();
 
-  const contactList = useSelector((state:RootState)=> state.getContactsReducer.contacts);
+  const contactList = useSelector((state: RootState) => state.getContactsReducer.contacts);
 
-  useEffect(()=> {
+  useEffect(() => {
     dispatch(thunkListContacts())
-  },[])
+  }, [])
+
+
+  useEffect(() => { }, [contactList])
 
 
   return (
