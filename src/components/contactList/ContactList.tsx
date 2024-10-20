@@ -1,9 +1,6 @@
 import './contact-list.css'
-// import { ContactItem } from "./contactItem/ContactItem"
 import { useEffect } from "react"
-// import { useSelector } from "react-redux"
-// import { RootState, useAppDispatch } from "../../app/store"
-// import { thunkContacts } from "../../api/contact"
+
 import { Navbar } from "../Navbar/Navbar"
 import { useSelector } from 'react-redux'
 import { RootState, useAppDispatch } from '../../app/store'

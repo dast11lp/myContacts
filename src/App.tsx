@@ -13,17 +13,19 @@ function App() {
 
   return (
     <div className='layout'>
-      <h1>Contactos</h1>
-      <div >
-        <ContactDetails />
+      <h1 className='contact-title'>Contactos</h1>
+      <ContactDetails />
+      <div className='layout__content'>
+
         <ContactList />
-        {modalOpen && (
-          <Modal>
-            {(modalSlice.type === 'addContact' || modalSlice.type === 'editContact')
-              && <ContactForm />}
-          </Modal>
-        )}
+
       </div>
+      {modalOpen && (
+        <Modal>
+          {(modalSlice.type === 'addContact' || modalSlice.type === 'editContact')
+            && <ContactForm />}
+        </Modal>
+      )}
     </div>
   )
 }

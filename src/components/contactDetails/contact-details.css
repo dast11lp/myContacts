@@ -1,0 +1,30 @@
+.resume {
+    display: flex;
+    flex-direction: column;
+
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.title {
+    font-size: 40px;
+    
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    margin: 20px 0;
+}
+
+@media (max-width: 700px) {
+    .resume {
+        text-align: center;
+        grid-column: 1/-1;
+        
+    }
+}

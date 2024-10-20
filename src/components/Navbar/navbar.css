@@ -1,8 +1,10 @@
 .navbar {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .search {
     padding: var(--padding-primary);
+    width: 100%;
 }

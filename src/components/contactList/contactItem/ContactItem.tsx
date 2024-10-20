@@ -4,9 +4,7 @@ import './contact-item.css'
 import { useAppDispatch } from '../../../app/store'
 import { setModal } from '../../../features/modalSlice'
 import { thunkContactById, thunkDeleteContact, thunkListContacts } from '../../../api/contactsApi'
-// import { useAppDispatch } from '../../../app/store.ts'
-// import { thunkSingleContact } from '../../../api/contact'
-// import { updateContact } from '../../../features/updateContactSlice'
+
 
 interface Props {
   contact: Contact
@@ -26,7 +24,7 @@ export const ContactItem: React.FC<Props> = ({ contact }) => {
   }
 
   const deleteSingleContact = async (id: number) => {
-    dispatch(thunkDeleteContact(id)).then(()=> {
+    dispatch(thunkDeleteContact(id)).then(() => {
       dispatch(thunkListContacts())
     })
   }
@@ -34,10 +32,13 @@ export const ContactItem: React.FC<Props> = ({ contact }) => {
   return (
     <div className='item' onClick={getSingleContact}>
       <p className='name'>{contact.name}</p>
-      <p className='email'>{contact.phone}</p>
+      <p className='contact'>
+        <span className='email'>{contact.phone}</span>
+        <span> {contact.email}</span>
+      </p>
       <div className='btn-box'>
         <button className='btn btn--pri' onClick={edit} >Editar</button>
-        <button className='btn btn--sec' onClick={()=> deleteSingleContact(contact.id)}>Eliminar</button>
+        <button className='btn btn--sec' onClick={() => deleteSingleContact(contact.id)}>Eliminar</button>
       </div>
 
     </div>

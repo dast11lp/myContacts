@@ -1,25 +1,30 @@
-import './contact-details.module.css'
+import './contact-details.css';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../app/store';
 
 export const ContactDetails = () => {
-
     const contact = useSelector((state: RootState) => state.getSingleContactReducer.contact);
 
     return (
-        contact ?
-            <div className='resume'>
-                <h4>Nombre: {contact?.name}</h4>
-                <div>
-                    <p>Telefono: {contact?.phone}</p>
-                </div>
+        <div className='resume'>
+            {contact ? (
+                <>
+                    <h4 className='title'>{contact.name}</h4>
+                    <div className='content'>
 
-                <div>
-                    <p>Fecha de Nacimiento: {contact?.date_of_birth}</p>
-                    <p>Direccion: {contact?.address}</p>
-                    <p>Correo electrónico: {contact?.email}</p>
-                </div>
-            </div> :
-            <h2>Selecciona contacto</h2>
-    )
+                        <p className='phone'><strong>Teléfono:</strong> {contact.phone}</p>
+
+
+                        <p><strong>Fecha de Nacimiento:</strong> {contact.date_of_birth}</p>
+                        <p><strong>Dirección:</strong> {contact.address}</p>
+                        <p><strong>Correo electrónico:</strong> {contact.email}</p>
+
+                    </div>
+                </>
+
+            ) : (
+                <h2>Selecciona contacto</h2>
+            )}
+        </div>
+    );
 }

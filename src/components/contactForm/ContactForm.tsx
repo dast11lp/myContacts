@@ -84,7 +84,17 @@ export const ContactForm = () => {
       </div>
 
       <div className="input">
-        <input {...register("address", { required: 'La dirección es requerida' })} className="input__input-box" type='text' />
+        <input
+          {...register("address", {
+            required: 'La dirección es requerida',
+            minLength: {
+              value: 8,
+              message: 'Al menos 12 caracteres'
+            }
+          })}
+          className="input__input-box"
+          type='text'
+        />
         <label style={watch("address") ? labelOff : {}} className="input__label">Dirección</label>
         <span className="input__msg input__msg--error">{errors.address?.message}</span>
       </div>
