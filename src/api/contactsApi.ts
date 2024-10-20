@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
-import { Contact } from "../types/contact.type";
+import { NewContact } from "../types/contact.type";
 
 const API_URL = 'http://localhost:5000/api/'
 
@@ -30,7 +30,7 @@ export const thunkListContacts = createAsyncThunk(
 ///////////////////////////////////////
 // addContact
 
-const addContact = async (newContact: Contact) => {
+const addContact = async (newContact: NewContact) => {
     try {
         const response = await fetch(`${API_URL}contacts`, {
             method: 'POST',
@@ -49,7 +49,7 @@ const addContact = async (newContact: Contact) => {
 
 export const thunkAddContact = createAsyncThunk(
     '/ contacts',
-    async (newContact: Contact) => {
+    async (newContact: NewContact) => {
         const request = await addContact(newContact)
 
         return request;
@@ -59,7 +59,7 @@ export const thunkAddContact = createAsyncThunk(
 ///////////////////////////////////////
 /// get one contact
 
-const fetchContactById = async (id) => {
+const fetchContactById = async (id: number) => {
     try {
         const response = await fetch(`${API_URL}contacts/${id}`);
         if (!response.ok) throw new Error('Error al obtener el contacto');
@@ -81,7 +81,7 @@ export const thunkContactById = createAsyncThunk(
 ///////////////////////////////////
 /// update single contact
 
-const updateContact = async (id, updatedContact) => {
+const updateContact = async (id: number, updatedContact: NewContact) => {
     try {
         const response = await fetch(`${API_URL}contacts/${id}`, {
             method: 'PUT',
@@ -100,7 +100,7 @@ const updateContact = async (id, updatedContact) => {
 
 export const ThunkUpdateContact = createAsyncThunk(
     '/api/contacts/:id',
-    async ({ id, contact }: { id: number; contact: Contact }) => {
+    async ({ id, contact }: { id: number; contact: NewContact }) => {
         const request = await updateContact(id, contact);
         return request;
     }

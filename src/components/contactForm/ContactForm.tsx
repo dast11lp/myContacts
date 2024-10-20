@@ -1,19 +1,22 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
-import './contact-form.css';
 import { RootState, useAppDispatch } from '../../app/store.ts';
 
 import { useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
 import { thunkAddContact, thunkContactById, thunkListContacts, ThunkUpdateContact } from '../../api/contactsApi.ts';
+import { useEffect } from 'react';
+import './contact-form.css';
+import { NewContact } from '../../types/contact.type.ts';
 
 
 interface IformInput {
+  id?: number
   name: string
   phone: string
   date_of_birth: string
   address: string
   email: string
 }
+
 
 export const ContactForm = () => {
 
@@ -28,26 +31,35 @@ export const ContactForm = () => {
   const { object } = useSelector((state: RootState) => state.modalReducer.modalData);
   const contactToEdit = useSelector((state: RootState) => state.getSingleContactReducer.contact);
 
-  const [contactToUpdate, setcontactToUpdate] = useState();
-
 
   const id = object?.id;
 
   const { register, handleSubmit, watch, reset } = useForm<IformInput>();
 
-  const onSubmit: SubmitHandler<IformInput> = (data) => {
+
+
+  const onSubmit: SubmitHandler<NewContact> = (data) => {
+    const newContact: NewContact = {
+      ...data,
+    };
     if (type === 'addContact') {
-      dispatch(thunkAddContact(data)).then(() => {
+      // Aquí no necesitas asignar un id en el frontend
+
+      dispatch(thunkAddContact(newContact)).then(() => {
         dispatch(thunkListContacts());
       });
     }
 
     if (type === 'editContact') {
-      dispatch(ThunkUpdateContact({ id, contact: data })).then(() => {
+
+      dispatch(ThunkUpdateContact({ id, contact: newContact })).then(() => {
         dispatch(thunkListContacts());
       });
     }
   };
+
+
+
 
 
   useEffect(() => {

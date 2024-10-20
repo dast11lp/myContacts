@@ -15,3 +15,5 @@ export interface Contact {
     email: string;
     
 }
+
+export type NewContact = Omit<Contact, 'id'>;

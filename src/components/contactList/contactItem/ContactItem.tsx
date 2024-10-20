@@ -3,7 +3,7 @@ import { Contact } from '../../../types/contact.type'
 import './contact-item.css'
 import { useAppDispatch } from '../../../app/store'
 import { setModal } from '../../../features/modalSlice'
-import { thunkContactById, thunkDeleteContact } from '../../../api/contactsApi'
+import { thunkContactById, thunkDeleteContact, thunkListContacts } from '../../../api/contactsApi'
 // import { useAppDispatch } from '../../../app/store.ts'
 // import { thunkSingleContact } from '../../../api/contact'
 // import { updateContact } from '../../../features/updateContactSlice'
@@ -19,7 +19,6 @@ export const ContactItem: React.FC<Props> = ({ contact }) => {
 
   const edit = () => {
     dispatch(setModal({ type: 'editContact', open: true, title: 'Editar Contacto', object: { id: contact.id } }));
-    // dispatch(updateContact(contact))
   }
 
   const getSingleContact = async () => {
@@ -27,7 +26,9 @@ export const ContactItem: React.FC<Props> = ({ contact }) => {
   }
 
   const deleteSingleContact = async (id: number) => {
-    dispatch(thunkDeleteContact(id))
+    dispatch(thunkDeleteContact(id)).then(()=> {
+      dispatch(thunkListContacts())
+    })
   }
 
   return (

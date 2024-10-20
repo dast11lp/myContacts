@@ -63,34 +63,5 @@
       "zip_code": "130001"
     },
     "email": "charliedavis@example.com"
-  },
-  {
-    "id": 6,
-    "name": "Diana Evons",
-    "phone": "3067890123",
-    "date_of_birth": "1991-06-15",
-    "address": {
-      "street": "Avenida 6 #78-90",
-      "city": "Bucaramanga",
-      "department": "Santander",
-      "zip_code": "680001"
-    },
-    "email": "dianaevans@example.com"
-  },
-  {
-    "id": 7,
-    "name": "Daniel",
-    "phone": "3014794421",
-    "date_of_birth": "2024-10-08",
-    "address": "calle 4",
-    "email": "daniel@mail.com"
-  },
-  {
-    "id": 8,
-    "name": "Dast",
-    "phone": "3014794421",
-    "date_of_birth": "2024-10-02",
-    "address": "calle",
-    "email": "correo@maial.com"
   }
 ]
