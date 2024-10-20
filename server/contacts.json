@@ -4,12 +4,7 @@
     "name": "John Doe",
     "phone": "3012345678",
     "date_of_birth": "1990-01-01",
-    "address": {
-      "street": "Calle 1 #23-45",
-      "city": "Bogotá",
-      "department": "Cundinamarca",
-      "zip_code": "110111"
-    },
+    "address": "Calle 1 #23-45",
     "email": "johndoe@mail.com"
   },
   {
@@ -17,12 +12,7 @@
     "name": "Jane Smith",
     "phone": "3023456789",
     "date_of_birth": "1985-02-14",
-    "address": {
-      "street": "Carrera 2 #34-56",
-      "city": "Medellín",
-      "department": "Antioquia",
-      "zip_code": "050001"
-    },
+    "address": "Carrera 2 #34-56",
     "email": "janesmith@mail.com"
   },
   {
@@ -30,12 +20,7 @@
     "name": "Alice Johnson",
     "phone": "3034567890",
     "date_of_birth": "1992-03-10",
-    "address": {
-      "street": "Avenida 3 #45-67",
-      "city": "Cali",
-      "department": "Valle del Cauca",
-      "zip_code": "760001"
-    },
+    "address": "Avenida 3 #45-67",
     "email": "alicejohnson@correo.com"
   },
   {
@@ -43,12 +28,7 @@
     "name": "Bob Brown",
     "phone": "3045678901",
     "date_of_birth": "1988-04-25",
-    "address": {
-      "street": "Calle 4 #56-78",
-      "city": "Barranquilla",
-      "department": "Atlántico",
-      "zip_code": "080001"
-    },
+    "address": "Calle 4 #56-78",
     "email": "bobbrown@correo.com"
   },
   {
@@ -56,12 +36,23 @@
     "name": "Charlie Davis",
     "phone": "3056789012",
     "date_of_birth": "1995-05-30",
-    "address": {
-      "street": "Carrera 5 #67-89",
-      "city": "Cartagena",
-      "department": "Bolívar",
-      "zip_code": "130001"
-    },
+    "address": "Carrera 5 #67-89",
     "email": "charliedavis@example.com"
+  },
+  {
+    "id": 6,
+    "name": "Pedro",
+    "phone": "3014794421",
+    "date_of_birth": "2024-10-06",
+    "address": "calle",
+    "email": "correo@maial.com"
+  },
+  {
+    "id": 7,
+    "name": "Roberto",
+    "phone": "6459836",
+    "date_of_birth": "2028-05-30",
+    "address": "calle",
+    "email": "correo@correo.com"
   }
 ]

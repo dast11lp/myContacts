@@ -12,9 +12,9 @@ function App() {
 
 
   return (
-    <>
+    <div className='layout'>
       <h1>Contactos</h1>
-      <div className='layout'>
+      <div >
         <ContactDetails />
         <ContactList />
         {modalOpen && (
@@ -24,7 +24,7 @@ function App() {
           </Modal>
         )}
       </div>
-    </>
+    </div>
   )
 }
 

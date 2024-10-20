@@ -27,6 +27,7 @@ export const ContactList = () => {
 
   return (
     <div className='list'>
+      <h2>Lista de Contactos</h2>
       <Navbar />
       {contactList && contactList.length > 0 && contactList.map((contact, i) => (
         <ContactItem key={i} contact={contact} />

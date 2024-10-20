@@ -9,14 +9,14 @@ export const ContactDetails = () => {
     return (
         contact ?
             <div className='resume'>
+                <h4>Nombre: {contact?.name}</h4>
                 <div>
-                    <p>Nombre: {contact?.name}</p>
                     <p>Telefono: {contact?.phone}</p>
                 </div>
 
                 <div>
                     <p>Fecha de Nacimiento: {contact?.date_of_birth}</p>
-                    {/* <p>Direccion: {contact?.address}</p> */}
+                    <p>Direccion: {contact?.address}</p>
                     <p>Correo electrónico: {contact?.email}</p>
                 </div>
             </div> :
