@@ -32,6 +32,8 @@ const modalSlice = createSlice({
         },
 
         closeModal :  (state) => {
+            console.log("me ejecuto??");
+            
             state.modalData.type = null,
             state.modalData.title = null,
             state.modalData.message = null,
@@ -42,5 +44,5 @@ const modalSlice = createSlice({
 
 })
 
-export const { setModal } = modalSlice.actions;
+export const { setModal, closeModal } = modalSlice.actions;
 export default modalSlice.reducer;

@@ -8,28 +8,12 @@
     "email": "johndoe@mail.com"
   },
   {
-    "id": 2,
-    "name": "Jane Smith",
-    "phone": "3023456789",
-    "date_of_birth": "1985-02-14",
-    "address": "Carrera 2 #34-56",
-    "email": "janesmith@mail.com"
-  },
-  {
     "id": 3,
     "name": "Alice Johnson",
     "phone": "3034567890",
     "date_of_birth": "1992-03-10",
     "address": "Avenida 3 #45-67",
     "email": "alicejohnson@correo.com"
-  },
-  {
-    "id": 4,
-    "name": "Bob Brown",
-    "phone": "3045678901",
-    "date_of_birth": "1988-04-25",
-    "address": "Calle 4 #56-78",
-    "email": "bobbrown@correo.com"
   },
   {
     "id": 5,
@@ -41,66 +25,10 @@
   },
   {
     "id": 6,
-    "name": "Pedro",
+    "name": "Pablo",
     "phone": "3014794421",
     "date_of_birth": "2024-10-06",
-    "address": "calle",
+    "address": "calle 45",
     "email": "correo@maial.com"
-  },
-  {
-    "id": 7,
-    "name": "Roberto",
-    "phone": "6459836",
-    "date_of_birth": "2028-05-30",
-    "address": "calle",
-    "email": "correo@correo.com"
-  },
-  {
-    "id": 8,
-    "name": "Test",
-    "phone": "3014794421",
-    "date_of_birth": "2024-10-07",
-    "address": "calle 4 388",
-    "email": "daniel@mail.com"
-  },
-  {
-    "id": 9,
-    "name": "Test",
-    "phone": "3014794421",
-    "date_of_birth": "2024-10-07",
-    "address": "calle 4 388",
-    "email": "daniel@mail.com"
-  },
-  {
-    "id": 10,
-    "name": "Test",
-    "phone": "3014794421",
-    "date_of_birth": "2024-10-07",
-    "address": "calle 4 388",
-    "email": "daniel@mail.com"
-  },
-  {
-    "id": 11,
-    "name": "Test",
-    "phone": "3014794421",
-    "date_of_birth": "2024-10-07",
-    "address": "calle 4 388",
-    "email": "daniel@mail.com"
-  },
-  {
-    "id": 12,
-    "name": "Test",
-    "phone": "3014794421",
-    "date_of_birth": "2024-10-07",
-    "address": "calle 4 388",
-    "email": "daniel@mail.com"
-  },
-  {
-    "id": 13,
-    "name": "Test",
-    "phone": "3014794421",
-    "date_of_birth": "2024-10-07",
-    "address": "calle 4 388",
-    "email": "daniel@mail.com"
   }
 ]

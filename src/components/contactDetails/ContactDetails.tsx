@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../app/store';
 
 export const ContactDetails = () => {
-    const contact = useSelector((state: RootState) => state.getSingleContactReducer.contact);
+    const contact = useSelector((state: RootState) => state.getSingleContactReducer.contactToEdit);
+    
 
     return (
         <div className='resume'>

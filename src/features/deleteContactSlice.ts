@@ -16,7 +16,7 @@ const deleteContactSlice = createSlice({
     reducers: {},
     extraReducers(builder) {
         builder.addCase(thunkDeleteContact.fulfilled, (state, action)=> {
-            state.contact = action.payload;
+            // state.contact = action.payload;
         }) 
     },
 })

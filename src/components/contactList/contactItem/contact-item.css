@@ -1,6 +1,6 @@
 .item {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 10px;
     padding: 10px;
@@ -16,6 +16,7 @@
 
 .name {
     font-weight: 700;
+    width: 80px;
 }
 
 .contact {
@@ -25,4 +26,5 @@
 
 .email {
     font-size: 12px;
+    width: 100px;
 }

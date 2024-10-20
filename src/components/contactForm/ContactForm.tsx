@@ -5,6 +5,7 @@ import { thunkAddContact, thunkContactById, thunkListContacts, ThunkUpdateContac
 import { useEffect } from 'react';
 import './contact-form.css';
 import { NewContact } from '../../types/contact.type.ts';
+import { closeModal } from '../../features/modalSlice.ts';
 
 interface IformInput {
   id?: number;
@@ -44,6 +45,8 @@ export const ContactForm = () => {
     if (type === 'editContact') {
       dispatch(ThunkUpdateContact({ id, contact: newContact })).then(() => {
         dispatch(thunkListContacts());
+        dispatch(thunkContactById(id));
+        dispatch(closeModal())
       });
     }
   };
@@ -72,7 +75,7 @@ export const ContactForm = () => {
       </div>
 
       <div className="input">
-        <input {...register("phone", { required: 'El teléfono es requerido', pattern: { value: /^(\d{10}|\d{7})$/, message: 'Teléfono inválido' } })} className="input__input-box" type='text' />
+        <input {...register("phone", { required: 'El teléfono es requerido', pattern: { value: /^(\d{10}|\d{7})$/, message: 'El número debe  tener 7 o 10 caracteres' } })} className="input__input-box" type='text' />
         <label style={watch("phone") ? labelOff : {}} className="input__label">Teléfono</label>
         <span className="input__msg input__msg--error">{errors.phone?.message}</span>
       </div>
@@ -105,7 +108,7 @@ export const ContactForm = () => {
         <span className="input__msg input__msg--error">{errors.email?.message}</span>
       </div>
 
-      <input className='btn' type='submit' value={'Guardar'} />
+      <input className='btn btn--sec' type='submit' value={'Guardar'} />
     </form>
   );
 }

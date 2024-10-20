@@ -71,7 +71,7 @@ const fetchContactById = async (id: number) => {
 };
 
 export const thunkContactById = createAsyncThunk(
-    '/api/contacts/:id',
+    '/api/contacts/:id/GET',
     async (id: number) => {
         const request = await fetchContactById(id)
         return request;
@@ -99,7 +99,7 @@ const updateContact = async (id: number, updatedContact: NewContact) => {
 };
 
 export const ThunkUpdateContact = createAsyncThunk(
-    '/api/contacts/:id',
+    '/api/contacts/:id/update',
     async ({ id, contact }: { id: number; contact: NewContact }) => {
         const request = await updateContact(id, contact);
         return request;
@@ -122,7 +122,7 @@ const deleteContact = async (id: number) => {
 };
 
 export const thunkDeleteContact = createAsyncThunk(
-    '/api/contacts/:id',
+    '/api/contacts/:id/delete',
     async (id: number) => {
         const request = await deleteContact(id);
         return request;

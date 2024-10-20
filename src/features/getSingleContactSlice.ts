@@ -16,15 +16,16 @@ const getSingleContactSlice = createSlice({
     name: 'getSingleContactSlice',
     initialState,
     reducers: {},
-    // extraReducers(builder) {
-    //     builder.addCase(thunkContactById.fulfilled, (state, actions) => { 
-    //         state.contact = actions.payload;
-    //     })
-    // },
+
     extraReducers(builder) {
         builder.addCase(thunkContactById.fulfilled, (state, actions) => { 
+            
+            
             state.contact = actions.payload;
-            state.contactToEdit = actions.payload; // Guarda también el contacto para editar
+            state.contactToEdit = actions.payload; 
+
+            console.log(state.contactToEdit);
+            console.log(actions.payload);
         });
     }
     
